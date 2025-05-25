@@ -13,12 +13,8 @@ BloodGuard adalah aplikasi basis data untuk manajemen stok darah, donor, dan dis
 
 
 ## Anggota Kelompok
+- ChatGPT (Asisten AI)
 - Dimas Bayu Nugroho(Database Administrator/Researcher)
-- Nama 2 (NIM)
-- Nama 3 (NIM)
-- Nama 4 (NIM)
-- Nama 5 (NIM)
-
 
 ## Tech Stack
 - **Database:** MySQL (via XAMPP)
@@ -58,6 +54,5 @@ Standar praktik terkini dari American Association of Blood Banks (AABB) untuk ba
 
 ---
 
-
-
 > Untuk detail query dan skenario penggunaan, lihat file [bloodguard.sql](./bloodguard.sql).
+>Untuk ERD dan diagram relasi, lihat file [ERD](./ERD.png).
