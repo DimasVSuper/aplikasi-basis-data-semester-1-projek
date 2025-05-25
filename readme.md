@@ -55,4 +55,5 @@ Standar praktik terkini dari American Association of Blood Banks (AABB) untuk ba
 ---
 
 > Untuk detail query dan skenario penggunaan, lihat file [bloodguard.sql](./bloodguard.sql).
+
 >Untuk ERD dan diagram relasi, lihat file [ERD](./ERD.png).
