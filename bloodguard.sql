@@ -130,7 +130,17 @@ VALUES (@stok_id, (SELECT id FROM rumah_sakit WHERE nama = 'RS. Sejahtera'), 'Ke
 UPDATE stok_darah SET status = 'Terpakai' WHERE id = @stok_id;
 -- ROLLBACK(Gunakan bila salah satu Transaksi Error!)
 COMMIT;
-
+-- Cek stok darah yang statusnya sudah berubah menjadi 'Terpakai'
+SELECT * FROM stok_darah WHERE status = 'Terpakai';
+-- Cek transaksi terakhir yang terjadi (misal 5 transaksi terakhir)
+SELECT * FROM transaksi ORDER BY tgl_transaksi DESC LIMIT 5;
+-- Cek detail distribusi ke RS Sejahtera
+SELECT t.*, rs.nama AS nama_rs, s.jenis AS jenis_darah
+FROM transaksi t
+JOIN rumah_sakit rs ON t.rs_id = rs.id
+JOIN stok_darah s ON t.stok_id = s.id
+WHERE rs.nama = 'RS. Sejahtera'
+ORDER BY t.tgl_transaksi DESC;
 
 
 -- 4. Cek Stok Darah Tersedia
