@@ -2,7 +2,7 @@
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/DimasVSuper/aplikasi-basis-data-semester-1-projek) [![MySQL](https://img.shields.io/badge/MySQL-Database-orange?logo=mysql)](https://www.mysql.com/)
 
 ## Deskripsi
-BloodGuard adalah aplikasi basis data untuk manajemen stok darah, donor, dan distribusi darah ke rumah sakit. Sistem ini dirancang untuk memudahkan pengelolaan data donor, stok darah, transaksi distribusi, serta pelaporan pada bank darah. Aplikasi ini menggunakan MySQL sebagai database dan XAMPP sebagai server lokal.
+BloodGuard adalah aplikasi basis data untuk manajemen stok darah, donor, dan distribusi darah ke rumah sakit. Sistem ini dirancang untuk memudahkan pengelolaan data donor, stok darah, transaksi distribusi, serta pelaporan pada bank darah.
 
 ## Fitur Utama
 - Manajemen data donor dan stok darah.
@@ -17,17 +17,15 @@ BloodGuard adalah aplikasi basis data untuk manajemen stok darah, donor, dan dis
 - Dimas Bayu Nugroho
 
 ## Tech Stack
-- **Database:** MySQL (via XAMPP)
-- **Server:** XAMPP (Apache, MySQL)
+- **Database:** MySQL
 - **Bahasa SQL:** MySQL Syntax
 
 ## Cara Penggunaan
-1. **Install XAMPP** di komputer Anda.
-2. **Jalankan Apache dan MySQL** melalui XAMPP Control Panel.
-3. **Import file `bloodguard.sql`** ke database MySQL menggunakan phpMyAdmin atau command line:
-   - Buka phpMyAdmin, buat database baru bernama `bloodguard`.
+1. **Setup MySQL** di komputer Anda.
+2. **Import file `bloodguard.sql`** ke database MySQL:
+   - Buat database baru bernama `bloodguard`.
    - Import file `bloodguard.sql`.
-4. **Database siap digunakan** untuk pengembangan aplikasi atau query operasional.
+3. **Database siap digunakan** untuk pengembangan aplikasi atau query operasional.
 
 ## Struktur Database
 - **donor:** Data pendonor darah.
