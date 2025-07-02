@@ -14,7 +14,7 @@ BloodGuard adalah aplikasi basis data untuk manajemen stok darah, donor, dan dis
 
 ## Anggota Kelompok
 - ChatGPT (Asisten AI)
-- Dimas Bayu Nugroho(Database Administrator/Researcher)
+- Dimas Bayu Nugroho
 
 ## Tech Stack
 - **Database:** MySQL (via XAMPP)
