@@ -128,8 +128,62 @@ INSERT INTO transaksi (stok_id, rs_id, jenis)
 VALUES (@stok_id, (SELECT id FROM rumah_sakit WHERE nama = 'RS. Sejahtera'), 'Keluar');
 
 UPDATE stok_darah SET status = 'Terpakai' WHERE id = @stok_id;
--- ROLLBACK(Gunakan bila salah satu Transaksi Error!)
+-- ROLLBACK; (Gunakan bila salah satu Transaksi Error!)
 COMMIT;
+
+-- ================================
+-- CEK HASIL TRANSAKSI Distribusi Darah ke RS
+-- ================================
+
+-- 1. Cek transaksi yang baru dibuat
+SELECT 
+    t.id as transaksi_id,
+    t.stok_id,
+    t.rs_id,
+    t.jenis,
+    t.tgl_transaksi,
+    rs.nama as nama_rs,
+    s.jenis as jenis_darah,
+    s.status as status_stok
+FROM transaksi t
+JOIN rumah_sakit rs ON t.rs_id = rs.id
+JOIN stok_darah s ON t.stok_id = s.id
+ORDER BY t.tgl_transaksi DESC
+LIMIT 1;
+
+-- 2. Cek perubahan status stok darah
+SELECT 
+    id,
+    jenis,
+    status,
+    tgl_masuk,
+    tgl_expire
+FROM stok_darah 
+WHERE id = @stok_id;
+
+-- 3. Cek semua transaksi hari ini
+SELECT 
+    t.id,
+    rs.nama as rumah_sakit,
+    s.jenis as jenis_darah,
+    t.jenis as tipe_transaksi,
+    t.tgl_transaksi
+FROM transaksi t
+JOIN rumah_sakit rs ON t.rs_id = rs.id
+JOIN stok_darah s ON t.stok_id = s.id
+WHERE DATE(t.tgl_transaksi) = CURDATE();
+
+-- 4. Cek total stok tersedia setelah transaksi
+SELECT 
+    s.jenis,
+    COUNT(*) as total_tersedia
+FROM stok_darah s
+WHERE s.status = 'Tersedia'
+GROUP BY s.jenis;
+
+-- ================================
+-- Lanjutan Skenario di bawah 
+-- ================================
 
 
 
