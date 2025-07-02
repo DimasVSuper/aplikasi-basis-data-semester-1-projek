@@ -1,5 +1,5 @@
 # BloodGuard - Sistem Manajemen Bank Darah - Dimas Bayu Nugroho
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/DimasVSuper/aplikasi-basis-data-semester-1-projek) [![MySQL](https://img.shields.io/badge/MySQL-Database-orange?logo=mysql)](https://www.mysql.com/) [![XAMPP](https://img.shields.io/badge/XAMPP-Server-orange?logo=apache)](https://www.apachefriends.org/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/DimasVSuper/aplikasi-basis-data-semester-1-projek) [![MySQL](https://img.shields.io/badge/MySQL-Database-orange?logo=mysql)](https://www.mysql.com/)
 
 ## Deskripsi
 BloodGuard adalah aplikasi basis data untuk manajemen stok darah, donor, dan distribusi darah ke rumah sakit. Sistem ini dirancang untuk memudahkan pengelolaan data donor, stok darah, transaksi distribusi, serta pelaporan pada bank darah. Aplikasi ini menggunakan MySQL sebagai database dan XAMPP sebagai server lokal.
